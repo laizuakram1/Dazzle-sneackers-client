@@ -1,9 +1,14 @@
+import { RouterProvider } from 'react-router';
+import { Toaster } from 'react-hot-toast';
+
 import './App.css';
+import router from './Routes/Routes/Routes';
 
 function App() {
   return (
-    <div>
-      <h3>welcome Dazzle Shoe.........</h3>
+    <div className='max-w-[1440px] mx-auto'>
+      <RouterProvider router={router}></RouterProvider>
+      <Toaster></Toaster>
     </div>
   );
 }
