@@ -1,0 +1,12 @@
+/* .card-thumb:hover .card-icons{
+    display:block;
+} */
+.card-icons{
+    display:none;
+    transition:ease-in 0.4s;
+    
+}
+.card:hover .card-icons{
+    display:block;
+    cursor:pointer;
+}
