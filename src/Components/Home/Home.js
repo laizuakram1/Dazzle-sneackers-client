@@ -1,4 +1,5 @@
 import React from 'react';
+import BestSeller from './BestSeller/BestSeller';
 import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
 import HomeSlider from './HomeSlider/HomeSlider';
 import SavingsTag from './SavingsTag/SavingsTag';
@@ -13,6 +14,7 @@ const Home = () => {
             <FeaturedProducts></FeaturedProducts>
             <SavingsTag></SavingsTag>
             <Services></Services>
+            <BestSeller></BestSeller>
         </div>
     );
 };
