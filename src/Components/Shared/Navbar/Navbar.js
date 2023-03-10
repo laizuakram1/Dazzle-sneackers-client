@@ -47,7 +47,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="navbar-end text-red-400">
+                <div className="navbar-end text-red-400 cursor-pointer">
                     <BsHeart className='text-3xl mr-5' />
                     <CgShoppingBag className='text-3xl mr-5' />
                 </div>

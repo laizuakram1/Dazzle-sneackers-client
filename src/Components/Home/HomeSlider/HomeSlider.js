@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../HomeSlider/HomeSlider.css";
 import "swiper/css";
 import "swiper/css/pagination";
+import '../HomeSlider/HomeSlider.css'
 // import required modules
 import { Pagination } from "swiper";
 import slideImg from '../../../assets/images/slider/slider.webp'
@@ -19,7 +20,7 @@ const HomeSlider = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="home-slider"
             >
                 <SwiperSlide>
                     <img src={slideImg} alt="" />
