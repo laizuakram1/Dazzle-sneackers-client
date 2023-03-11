@@ -1,0 +1,5 @@
+
+.member-card:hover .member-social {
+    display: block;
+    display: flex;
+}

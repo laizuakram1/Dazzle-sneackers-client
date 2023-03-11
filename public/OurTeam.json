@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Alex",
+        "title":"team member",
+        "image": "https://htmldemo.net/shome/shome/assets/img/team/1.webp"
+    },
+    {
+        "name":"Henry",
+        "title":"team member",
+        "image": "https://htmldemo.net/shome/shome/assets/img/team/2.webp"
+    },
+    {
+        "name":"Beiber",
+        "title":"team member",
+        "image": "https://htmldemo.net/shome/shome/assets/img/team/3.webp"
+    },
+    {
+        "name":"Ricky",
+        "title":"team member",
+        "image": "https://htmldemo.net/shome/shome/assets/img/team/4.webp"
+    }
+]
