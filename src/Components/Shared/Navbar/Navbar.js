@@ -62,7 +62,7 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 bg-red-500 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/'>About</Link></li>
+                            <li><Link to='/about'>About</Link></li>
                             <li><Link to='/'>Pages</Link></li>
                             <li><Link to='/'>Shop</Link></li>
                             <li><Link to='/'>Blog</Link></li>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 <div className="navbar-center">
                     <ul className="menu menu-horizontal rounded-box text-slate-100	">
                         <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/'>About</Link></li>
+                        <li><Link to='/about'>About</Link></li>
                         <li><Link to='/'>Pages</Link></li>
                         <li><Link to='/'>Shop</Link></li>
                         <li><Link to='/'>Blog</Link></li>
