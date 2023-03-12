@@ -42,7 +42,7 @@ const AllReviews = () => {
                     >
                         <SwiperSlide>
                             <div>
-                                <p className='text-sm w-72 text-center mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
+                                <p className='text-sm w-72 text-center mt-5 ml-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
                                 <div className="divider text-red-5000"></div>
                                 <div className='review-rattings grid md:grid-cols-2 mt-5'>
                                     <div>
@@ -68,7 +68,7 @@ const AllReviews = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <p className='text-sm w-72 text-center mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
+                                <p className='text-sm w-72 text-center mt-5 ml-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
                                 <div className="divider text-red-5000"></div>
                                 <div className='review-rattings grid md:grid-cols-2 mt-5'>
                                     <div>
@@ -94,7 +94,7 @@ const AllReviews = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <p className='text-sm w-72 text-center mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
+                                <p className='text-sm w-72 text-center mt-5 ml-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
                                 <div className="divider text-red-5000 mr-10"></div>
                                 <div className='review-rattings grid md:grid-cols-2 mt-5'>
                                     <div>
@@ -120,7 +120,7 @@ const AllReviews = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <p className='text-sm w-72 text-center mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
+                                <p className='text-sm w-72 text-center mt-5 ml-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
                                 <div className="divider text-red-5000 mr-10"></div>
                                 <div className='review-rattings grid md:grid-cols-2 mt-5'>
                                     <div>
@@ -146,7 +146,7 @@ const AllReviews = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <p className='text-sm w-72 text-center mt-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
+                                <p className='text-sm w-72 text-center jusitify-center mt-5 ml-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, autem. Vero temporibus magnam aut hic!</p>
                                 <div className="divider text-red-5000 mr-10"></div>
                                 <div className='review-rattings grid md:grid-cols-2 mt-5'>
                                     <div>
