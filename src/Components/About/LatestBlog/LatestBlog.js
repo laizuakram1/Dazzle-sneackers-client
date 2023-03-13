@@ -19,7 +19,7 @@ const LatestBlog = () => {
                         <figure>
                             <img src={blog.image} alt="Shoes" className="rounded-xl" />
                         </figure>
-                        <div className="card-actions justify-left mt-5">
+                        <div className="card-actions justify-left mt-5 ml-3">
                             <div className="badge badge-outline"><FaRegCalendarAlt className='text-red-400 mr-2'/>{blog.createdDate}</div>
                             <div className="badge badge-outline"><FaUserAlt className='text-red-400 mr-2'/>{blog.creator}</div>
                         </div>
