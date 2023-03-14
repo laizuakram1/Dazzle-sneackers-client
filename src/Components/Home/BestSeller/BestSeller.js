@@ -5,7 +5,6 @@ import { TbArrowsShuffle } from 'react-icons/tb'
 
 const BestSeller = () => {
     const [bestSeller, setBestSeller] = useState([]);
-    console.log(bestSeller);
 
     useEffect(() => {
         fetch('BestSeller.json')

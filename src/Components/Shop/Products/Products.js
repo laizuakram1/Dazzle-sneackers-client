@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai'
 import { FaExpandArrowsAlt } from 'react-icons/fa'
 import { TbArrowsShuffle } from 'react-icons/tb'
+import { Link } from 'react-router-dom';
+import ProductDetails from '../ProductDetails/ProductDetails';
 
 const Products = () => {
     const [products, setProducts] = useState([])
@@ -15,7 +17,7 @@ const Products = () => {
         <div>
             <div className='grid md:grid-cols-3'>
                 {
-                    products.map((product, i) => <div
+                    products.map((product, i) => <Link to={`/details/${product._id}`}><div
                         key={i}
                         className="card w-72 bg-base-100 mb-5">
                         <figure className='cursor-pointer'>
@@ -38,7 +40,9 @@ const Products = () => {
                             </ul>
                         </div>
 
-                    </div>)
+                    </div>
+
+                    </Link>)
                 }
             </div>
         </div>
