@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { useParams } from 'react-router';
 import ProductDetailsBanner from '../ProductDetailsBanner/ProductDetailsBanner';
 import "../ProductDetails/ProductDetails.css";
-import { CirclePicker } from 'react-color';
+import { AiOutlinePlus, AiOutlineMinus,AiOutlineHeart } from 'react-icons/ai'
 
 
 const ProductDetails = () => {
     // const { id } = useParams();
     // const [products, setProducts] = useState([])
+    const [counter, setCounter] = useState(0);
+    const [countError, setCountError] = useState('')
+
+    const increase = () => {
+        setCountError('')
+        if (counter > 10) {
+            return setCountError('this quantity not available!')
+        }
+        setCounter(count => count + 1);
+    };
+    const decrease = () => {
+        setCountError('')
+        if (counter < 0) {
+            return setCountError('select positive number')
+        }
+        setCounter(count => count - 1);
+    };
+
 
 
 
@@ -19,7 +37,7 @@ const ProductDetails = () => {
             <div className="product-details-container">
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row grid md:grid-cols-2">
-                        <div>
+                        <div className='flex justify-center'>
                             <img src="https://htmldemo.net/shome/shome/assets/img/shop/product-single/1.webp" className="max-w-md rounded-lg" />
                         </div>
                         <div>
@@ -62,8 +80,22 @@ const ProductDetails = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className='flex cursor-pointer'>
+                                <div className='w-24'>
+                                    <p className='border-2 w-10 ml-2 text-center'>{counter}</p>
+                                    <div>
+                                        <AiOutlineMinus onClick={decrease} className='inline mr-3 font-bold border text-2xl hover:bg-red-400 ease-out duration-500 rounded' /><AiOutlinePlus onClick={increase} className='inline border font-bold text-2xl hover:bg-red-400 ease-out duration-500 rounded' />
+                                    </div>
+                                    <p className='text-red-500'>{countError}</p>
+                                </div>
+                                <button className="btn btn-warning w-36">Add to Cart</button>
+                            </div>
+                            <div className='flex mt-8 text-xl'>
+                                <p className='mr-10'><AiOutlineHeart className='inline text-2xl text-red-400 mr-2'/>Add to Whishlist</p>
+                                <p><AiOutlineHeart className='inline text-2xl text-red-400 mr-2'/>Add to Compare</p>
+                            </div>
+                            <div className="divider"></div> 
 
-                            <button className="btn btn-warning">Add to Cart</button>
                         </div>
                     </div>
                 </div>
