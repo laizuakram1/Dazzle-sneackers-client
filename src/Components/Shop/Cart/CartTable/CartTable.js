@@ -49,7 +49,7 @@ const CartTable = () => {
                             <td>
                                 <div className="flex items-center space-x-3">
                                     <div className="avatar">
-                                        <div className="mask mask-squircle w-28 h-36">
+                                        <div className="mask mask-squircle w-28 h-28">
                                             <img src="https://htmldemo.net/shome/shome/assets/img/shop/8.webp" />
                                         </div>
                                     </div>
@@ -74,7 +74,7 @@ const CartTable = () => {
                             <td>
                                 <div className="flex items-center space-x-3">
                                     <div className="avatar">
-                                        <div className="mask mask-squircle w-28 h-36">
+                                        <div className="mask mask-squircle w-28 h-28">
                                             <img src="https://htmldemo.net/shome/shome/assets/img/shop/8.webp" />
                                         </div>
                                     </div>
@@ -99,7 +99,7 @@ const CartTable = () => {
                             <td>
                                 <div className="flex items-center space-x-3">
                                     <div className="avatar">
-                                        <div className="mask mask-squircle w-28 h-36">
+                                        <div className="mask mask-squircle w-28 h-28">
                                             <img src="https://htmldemo.net/shome/shome/assets/img/shop/8.webp" />
                                         </div>
                                     </div>
