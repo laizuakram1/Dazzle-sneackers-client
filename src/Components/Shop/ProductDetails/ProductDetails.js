@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 // import { useParams } from 'react-router';
 import ProductDetailsBanner from '../ProductDetailsBanner/ProductDetailsBanner';
 import "../ProductDetails/ProductDetails.css";
-import { AiOutlinePlus, AiOutlineMinus,AiOutlineHeart } from 'react-icons/ai'
+import { AiOutlinePlus, AiOutlineMinus, AiOutlineHeart } from 'react-icons/ai'
+import { FaPinterestP } from 'react-icons/fa'
+import { BsFacebook, BsInstagram } from 'react-icons/bs'
 
+// tabs import component
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
+import RelatedProducts from '../RelatedProducts/RelatedProducts';
 
 const ProductDetails = () => {
     // const { id } = useParams();
@@ -26,6 +35,12 @@ const ProductDetails = () => {
         setCounter(count => count - 1);
     };
 
+    const [value, setValue] = React.useState('1');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
 
 
 
@@ -33,7 +48,6 @@ const ProductDetails = () => {
     return (
         <div>
             <ProductDetailsBanner></ProductDetailsBanner>
-            <h3>Products details here........</h3>
             <div className="product-details-container">
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row grid md:grid-cols-2">
@@ -91,13 +105,42 @@ const ProductDetails = () => {
                                 <button className="btn btn-warning w-36">Add to Cart</button>
                             </div>
                             <div className='flex mt-8 text-xl'>
-                                <p className='mr-10'><AiOutlineHeart className='inline text-2xl text-red-400 mr-2'/>Add to Whishlist</p>
-                                <p><AiOutlineHeart className='inline text-2xl text-red-400 mr-2'/>Add to Compare</p>
+                                <p className='mr-10'><AiOutlineHeart className='inline text-2xl text-red-400 mr-2' />Add to Whishlist</p>
+                                <p><AiOutlineHeart className='inline text-2xl text-red-400 mr-2' />Add to Compare</p>
                             </div>
-                            <div className="divider"></div> 
+                            <div className="divider"></div>
+                            <div className='flex justify-between items-center cursor-pointer'>
+                                <p><span className='text-red-500'>CODE:</span> DS-23</p>
+                                <p><span className='text-red-500 mr-3'>SHARE</span>  <BsFacebook className='inline text-xl mr-4 hover:text-red-400 ease-out duration-500' />
+                                    <BsInstagram className='inline text-xl mr-4 hover:text-red-400 ease-out duration-500' />
+                                    <FaPinterestP className='inline text-xl mr-4 hover:text-red-400 ease-out duration-500' /></p>
+                            </div>
 
                         </div>
                     </div>
+                </div>
+                <div className="tab-container">
+                    <Box sx={{ width: '100%', typography: 'body1' }}>
+                        <TabContext  value={value}>
+                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                <TabList onChange={handleChange} aria-label="lab API tabs example">
+                                    <Tab label="Information" value="1" />
+                                    <Tab label="Description" value="2" />
+                                    <Tab label="Review(5)" value="3" />
+                                </TabList>
+                            </Box>
+                            <TabPanel className='border mx-16' value="1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, omnis saepe! Nostrum earum excepturi deserunt rerum necessitatibus laudantium sit suscipit velit, officiis, ut sequi molestias repellat. Dolor vero reprehenderit suscipit distinctio tempore facilis voluptas molestias ad, provident corporis soluta illo rerum laborum qui ex incidunt dolorem aliquid at, debitis quaerat?</p>
+                            </TabPanel>
+                            <TabPanel className='border mx-16' value="2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cum veritatis corrupti necessitatibus asperiores sint accusamus reiciendis eaque mollitia dolores? Illo impedit repudiandae nobis vel dolorum vero, deserunt optio tempora sit sequi similique repellat animi aliquid architecto voluptates repellendus omnis a? Quo debitis accusamus officia nesciunt nisi. Quo, corporis voluptatibus.</p>
+                            </TabPanel>
+                            <TabPanel value="3">Item Three</TabPanel>
+                        </TabContext>
+                    </Box>
+                </div>
+                <div className='related-products'>
+                    <RelatedProducts></RelatedProducts>
                 </div>
             </div>
         </div>
