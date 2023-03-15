@@ -13,6 +13,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import RelatedProducts from '../RelatedProducts/RelatedProducts';
+import { Link } from 'react-router-dom';
 
 const ProductDetails = () => {
     // const { id } = useParams();
@@ -102,7 +103,7 @@ const ProductDetails = () => {
                                     </div>
                                     <p className='text-red-500'>{countError}</p>
                                 </div>
-                                <button className="btn btn-warning w-36">Add to Cart</button>
+                                <Link to='/cart' className="btn btn-warning w-36">Add to Cart</Link>
                             </div>
                             <div className='flex mt-8 text-xl'>
                                 <p className='mr-10'><AiOutlineHeart className='inline text-2xl text-red-400 mr-2' />Add to Whishlist</p>
