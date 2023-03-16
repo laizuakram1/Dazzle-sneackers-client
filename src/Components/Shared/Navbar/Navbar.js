@@ -5,19 +5,18 @@ import { FaEnvelope } from 'react-icons/fa'
 import { BsHeart } from 'react-icons/bs'
 import { BiUserCircle } from 'react-icons/bi'
 import { CgShoppingBag } from 'react-icons/cg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 
 const Navbar = () => {
     const { auth, LogOut } = useContext(AuthContext);
-    const userName = auth?.currentUser?.displayName;
-
+    const navigate = useNavigate()
 
     const handleLogOut = () => {
         LogOut()
             .then(() => { 
-                alert('do you want to logout?')
+                navigate('/login')
             })
             .catch((err) => console.log(err))
     }
@@ -32,9 +31,8 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal items-center">
                         <li><a> <RiPhoneFill className='text-xl text-red-400' />+88 112345</a></li>
                         <li ><a className='border-x-2'> <FaEnvelope className='text-xl text-red-400' />laizuakram98@gmail.com</a></li>
-                        {/* <li><Link to='/login'> <BiUserCircle className='text-2xl text-red-400' />Login</Link></li> */}
                         {
-                            auth?.currentUser?.uid ? <button onClick={handleLogOut} className="btn btn-error">{userName}</button>
+                            auth?.currentUser?.displayName ? <button onClick={handleLogOut} className="btn btn-error">LogOut</button>
                             :<li><Link to='/login'> <BiUserCircle className='text-2xl text-red-400' />Login</Link></li>
 
                         }

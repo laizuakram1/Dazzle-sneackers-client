@@ -14,20 +14,25 @@ import { GiRunningShoe } from 'react-icons/gi'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { BsFacebook, BsInstagram } from 'react-icons/bs'
 import { AuthContext } from '../../Contexts/AuthProvider';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
+
 
 
 const SignUp = () => {
     const { register, handleSubmit } = useForm();
     const [showPassword, setShowPassword] = React.useState(false);
-    const { createUser, updateUser } = useContext(AuthContext)
+    const { createUser, updateUser, googleSignIn } = useContext(AuthContext)
+    const [googleUser, setGoogleUser] = useState(null)
+    console.log(googleUser)
+
+
+
     // const [user, setUser] = useState(null)
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathName || '/';
-    
+
 
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -43,16 +48,29 @@ const SignUp = () => {
             .then((result) => {
                 const user = result.user;
                 const userInfo = {
-                    displayName:data?.firstName
+                    displayName: data?.firstName
                 }
                 updateUser(userInfo)
-                .then(() =>{
-                    console.log(user);
-                    toast.success('SingUp successfully!')
-                    navigate(from, { replace: true });
+                    .then(() => {
+                        console.log(user);
+                        toast.success('SingUp successfully!')
+                        navigate(from, { replace: true });
 
-                })
-                .catch((error) => console.log(error.message))
+                    })
+                    .catch((error) => console.log(error.message))
+            })
+            .catch((error) => {
+                console.log(error.message)
+            })
+    }
+    // google sign in
+    const handleGoogleSingIn = () => {
+        googleSignIn()
+            .then((result) => {
+                setGoogleUser(result.user)
+                toast.success('SignIn with Google!')
+                navigate(from, { replace: true });
+
             })
             .catch((error) => {
                 console.log(error.message)
@@ -96,7 +114,7 @@ const SignUp = () => {
                             <input className='btn btn-success hover:bg-red-500 ease-out duration-500 border-0' type="submit" value='Submit' />
                             <div className="divider">OR</div>
                             <div className='flex justify-between'>
-                                <button className="btn btn-outline"><FcGoogle className='text-2xl' /></button>
+                                <button className="btn btn-outline"><FcGoogle onClick={handleGoogleSingIn} className='text-2xl' /></button>
                                 <button className="btn btn-outline"><BsFacebook className='text-2xl' /></button>
                                 <button className="btn btn-outline"><FaLinkedinIn className='text-2xl' /></button>
                                 <button className="btn btn-outline"><BsInstagram className='text-2xl' /></button>
