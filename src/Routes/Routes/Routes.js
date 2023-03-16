@@ -4,9 +4,11 @@ import About from '../../Components/About/About';
 import Home from '../../Components/Home/Home';
 import Login from '../../Components/Login/Login';
 import Cart from '../../Components/Shop/Cart/Cart';
+import Payment from '../../Components/Shop/Cart/Payment/Payment';
 import ProductDetails from '../../Components/Shop/ProductDetails/ProductDetails';
 import Shop from '../../Components/Shop/Shop/Shop';
 import SignUp from '../../Components/SignUp/SignUp';
+import LoginLayout from '../../Layout/LoginLayout';
 import Main from '../../Layout/Main';
 
 
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
                 element: <Cart></Cart>
             },
             {
+                path: '/payment',
+                element: <Payment></Payment>
+            },
+            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -46,6 +52,20 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
            
+        ]
+    },
+    {
+        path: '/',
+        element: <LoginLayout></LoginLayout>,
+        children: [
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <SignUp></SignUp>
+            }
         ]
     }
     

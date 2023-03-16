@@ -19,7 +19,7 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal">
                         <li><a> <RiPhoneFill className='text-xl text-red-400' />+88 112345</a></li>
                         <li ><a className='border-x-2'> <FaEnvelope className='text-xl text-red-400' />laizuakram98@gmail.com</a></li>
-                        <li><a> <BiUserCircle className='text-2xl text-red-400' />Account</a></li>
+                        <li><Link to='/login'> <BiUserCircle className='text-2xl text-red-400' />Login</Link></li>
 
                     </ul>
                 </div>

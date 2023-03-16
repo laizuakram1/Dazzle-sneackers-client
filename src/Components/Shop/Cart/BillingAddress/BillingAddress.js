@@ -1,15 +1,19 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import TextField from '@mui/material/TextField';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 const BillingAddress = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data =>{
-        
+    const onSubmit = data => {
+        console.log(data);
+        navigate('/payment')
     }
-    return (
+
+    const navigate = useNavigate();
+        return (
         <div className='mt-20'>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -74,8 +78,8 @@ const BillingAddress = () => {
                                     shrink: true,
                                 }}
                             />
-                                <input className='btn btn-success hover:bg-red-500 ease-out duration-500 hover:border-0 text-white' type="submit" value='Checkout' />
-                            
+                            <input className='btn btn-success hover:bg-red-500 ease-out duration-500 hover:border-0 text-white' type="submit" value='Checkout' />
+
                         </form>
                     </div>
                 </div>
