@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../Navbar/Navbar.css'
 import { RiPhoneFill } from 'react-icons/ri'
 import { FaEnvelope } from 'react-icons/fa'
-import { BiUserCircle } from 'react-icons/bi'
 import { BsHeart } from 'react-icons/bs'
+import { BiUserCircle } from 'react-icons/bi'
 import { CgShoppingBag } from 'react-icons/cg'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider';
 
 
 const Navbar = () => {
+    const { auth, LogOut } = useContext(AuthContext);
+    const userName = auth?.currentUser?.displayName;
+
+
+    const handleLogOut = () => {
+        LogOut()
+            .then(() => { 
+                alert('do you want to logout?')
+            })
+            .catch((err) => console.log(err))
+    }
+
     return (
         <div>
             <div className="navbar bg-base-200">
@@ -16,11 +29,15 @@ const Navbar = () => {
                     <p>World Wide Completely Free Returns and Free Shipping</p>
                 </div>
                 <div className="flex-none">
-                    <ul className="menu menu-horizontal">
+                    <ul className="menu menu-horizontal items-center">
                         <li><a> <RiPhoneFill className='text-xl text-red-400' />+88 112345</a></li>
                         <li ><a className='border-x-2'> <FaEnvelope className='text-xl text-red-400' />laizuakram98@gmail.com</a></li>
-                        <li><Link to='/login'> <BiUserCircle className='text-2xl text-red-400' />Login</Link></li>
+                        {/* <li><Link to='/login'> <BiUserCircle className='text-2xl text-red-400' />Login</Link></li> */}
+                        {
+                            auth?.currentUser?.uid ? <button onClick={handleLogOut} className="btn btn-error">{userName}</button>
+                            :<li><Link to='/login'> <BiUserCircle className='text-2xl text-red-400' />Login</Link></li>
 
+                        }
                     </ul>
                 </div>
             </div>
