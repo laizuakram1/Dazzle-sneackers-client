@@ -4,6 +4,7 @@ import About from '../../Components/About/About';
 import Home from '../../Components/Home/Home';
 import Login from '../../Components/Login/Login';
 import Cart from '../../Components/Shop/Cart/Cart';
+import CheckOutForm from '../../Components/Shop/Cart/Payment/CheckOutForm';
 import Payment from '../../Components/Shop/Cart/Payment/Payment';
 import ProductDetails from '../../Components/Shop/ProductDetails/ProductDetails';
 import Shop from '../../Components/Shop/Shop/Shop';
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/checkout',
+                element: <CheckOutForm></CheckOutForm>
             }
         ]
     }
