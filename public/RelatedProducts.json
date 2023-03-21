@@ -1,6 +1,6 @@
 [
     {
-        "_id":1,
+        
         "name":"White Black sneackers",
         "price":1200,
         "imageUrl":"https://i.ibb.co/whXzKYP/shoe7.webp",
@@ -10,7 +10,7 @@
         "size":[38,39,40,41,42,43]
     },
     {
-        "_id":2,
+        
         "name":"Brown converse",
         "price":1600,
         "imageUrl":"https://i.ibb.co/rdBCZj1/shoe8.webp",
@@ -20,7 +20,7 @@
         "size":[38,39,40,41,42,43]
     },
     {
-        "_id":3,
+        
         "name":"Black sneackers",
         "price":1200,
         "imageUrl":"https://i.ibb.co/bFdQfCh/shoe2.webp",
@@ -30,7 +30,7 @@
         "size":[38,39,40,41,42,43]
     },
     {
-        "_id":4,
+        
         "name":"Grey Jump",
         "price":1200,
         "imageUrl":"https://i.ibb.co/0hBvGQ2/shoe6.webp",
