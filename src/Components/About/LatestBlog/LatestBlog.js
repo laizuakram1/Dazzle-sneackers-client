@@ -6,7 +6,7 @@ const LatestBlog = () => {
     const [blogs, setBlogs] = useState([])
 
     useEffect(() => {
-        fetch('Blog.json')
+        fetch('http://localhost:8000/api/v1/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data.slice(0, 3)))
     }, [])

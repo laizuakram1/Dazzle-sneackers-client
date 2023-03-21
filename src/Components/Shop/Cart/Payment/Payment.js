@@ -12,11 +12,15 @@ const Payment = () => {
 
     return (
         <div>
-            <p>payment for sports snackers $300</p>
-            <div>
-                <Elements stripe={stripePromise}>
-                    <CheckOutForm />
-                </Elements>
+            <div className="card w-96 bg-base-100 shadow-xl mx-auto mt-20">
+                <div className="card-body">
+                    <p>payment for sports snackers $300</p>
+                    <div>
+                        <Elements stripe={stripePromise}>
+                            <CheckOutForm />
+                        </Elements>
+                    </div>
+                </div>
             </div>
         </div>
     );

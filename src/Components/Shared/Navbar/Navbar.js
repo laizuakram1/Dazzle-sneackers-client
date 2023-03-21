@@ -81,7 +81,7 @@ const Navbar = () => {
                             <li><Link to='/'>Pages</Link></li>
                             <li><Link to='/shop'>Shop</Link></li>
                             <li><Link to='/'>Blog</Link></li>
-                            <li><Link to='/'>Contact</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
                         <li><Link to='/'>Pages</Link></li>
                         <li><Link to='/shop'>Shop</Link></li>
                         <li><Link to='/'>Blog</Link></li>
-                        <li><Link to='/'>Contact</Link></li>
+                        <li><Link to='/contact'>Contact</Link></li>
 
                     </ul>
                 </div>

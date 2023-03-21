@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { useParams } from 'react-router';
 import ProductDetailsBanner from '../ProductDetailsBanner/ProductDetailsBanner';
 import "../ProductDetails/ProductDetails.css";
@@ -13,13 +13,22 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import RelatedProducts from '../RelatedProducts/RelatedProducts';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
-    // const { id } = useParams();
-    // const [products, setProducts] = useState([])
+    const { id } = useParams();
+    console.log(id);
+    
+    const [products, setProducts] = useState([])
+    console.log(products)
     const [counter, setCounter] = useState(0);
     const [countError, setCountError] = useState('')
+
+    useEffect(() =>{
+        fetch(`http://localhost:8000/api/v1/sneackers/${id}`)
+        .then(res => res.json())
+        .then(data => setProducts(data))
+    },[id])
 
     const increase = () => {
         setCountError('')
@@ -53,11 +62,11 @@ const ProductDetails = () => {
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row grid md:grid-cols-2">
                         <div className='flex justify-center'>
-                            <img src="https://htmldemo.net/shome/shome/assets/img/shop/product-single/1.webp" className="max-w-md rounded-lg" />
+                            <img src={products.imageUrl} className="max-w-md rounded-lg" />
                         </div>
                         <div>
-                            <h1 className="text-5xl font-bold">Lather Sports Shoe</h1>
-                            <h3 className='text-4xl font-bold mt-5'>$210</h3>
+                            <h1 className="text-5xl font-bold">{products.name}</h1>
+                            <h3 className='text-4xl font-bold mt-5'>${products.price}</h3>
                             <div className="rating mt-4">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />

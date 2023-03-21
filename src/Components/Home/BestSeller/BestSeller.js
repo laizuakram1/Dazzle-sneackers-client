@@ -7,7 +7,7 @@ const BestSeller = () => {
     const [bestSeller, setBestSeller] = useState([]);
 
     useEffect(() => {
-        fetch('BestSeller.json')
+        fetch('http://localhost:8000/api/v1/bestseller')
             .then(res => res.json())
             .then(data => setBestSeller(data))
     }, [])

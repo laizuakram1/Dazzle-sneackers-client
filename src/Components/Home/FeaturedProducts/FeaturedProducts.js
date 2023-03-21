@@ -10,7 +10,7 @@ const FeaturedProducts = () => {
     const [sneackers, setSneackers] = useState([])
 
     useEffect(() => {
-        fetch('sneackers.json')
+        fetch('http://localhost:8000/api/v1/sneackers')
             .then(res => res.json())
             .then(data => setSneackers(data))
     }, [])

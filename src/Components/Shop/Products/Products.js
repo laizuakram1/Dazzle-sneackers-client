@@ -7,9 +7,10 @@ import ProductDetails from '../ProductDetails/ProductDetails';
 
 const Products = () => {
     const [products, setProducts] = useState([])
+    console.log(products);
 
     useEffect(() => {
-        fetch('Sneackers.json')
+        fetch('http://localhost:8000/api/v1/sneackers')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
