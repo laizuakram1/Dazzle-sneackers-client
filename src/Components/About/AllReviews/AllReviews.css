@@ -59,3 +59,16 @@
     transform: rotate(-90deg);
   }
   
+
+
+
+
+
+  @media only screen and (max-width: 600px) {
+    .review-slide-container{
+      max-width: 300px;
+    }
+    .review-description{
+      display: none;
+    }
+  }

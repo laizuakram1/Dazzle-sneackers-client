@@ -23,7 +23,7 @@ const AllReviews = () => {
     return (
         <div className='my-10 mx-5'>
             <h3 className='text-4xl font-bold text-center py-10'>All Reviews</h3>
-            <div className='flex'>
+            <div className='flex review-container'>
                 <div className='review-slide-container'>
                     <Swiper
                         spaceBetween={30}

@@ -23,14 +23,14 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-200">
+            <div className="navbar bg-base-200 nav-top">
                 <div className="flex-1">
-                    <p>World Wide Completely Free Returns and Free Shipping</p>
+                    <p>World Wide Completely Free Returns and Free Shipping!</p>
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal items-center">
-                        <li><a> <RiPhoneFill className='text-xl text-red-400' />+88 112345</a></li>
-                        <li ><a className='border-x-2'> <FaEnvelope className='text-xl text-red-400' />laizuakram98@gmail.com</a></li>
+                        <li><Link> <RiPhoneFill className='text-xl text-red-400' />+88 112345</Link></li>
+                        <li ><Link className='border-x-2'> <FaEnvelope className='text-xl text-red-400' />laizuakram98@gmail.com</Link></li>
                         {
                             auth?.currentUser?.displayName ? <button onClick={handleLogOut} className="btn btn-error">LogOut</button>
                             :<li><Link to='/login'> <BiUserCircle className='text-2xl text-red-400' />Login</Link></li>
@@ -41,10 +41,10 @@ const Navbar = () => {
             </div>
 
             {/* nav2 */}
-            <div className="navbar bg-base-100 p-6">
+            <div className="navbar bg-base-100 p-6 nav-2">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <h2 className='text-2xl bold'>Dazzle</h2>
+                        <h2 className='logo text-2xl font-bold'>Dazzle.</h2>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><a>Homepage</a></li>
                             <li><a>Portfolio</a></li>

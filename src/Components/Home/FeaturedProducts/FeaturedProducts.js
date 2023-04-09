@@ -36,10 +36,10 @@ const FeaturedProducts = () => {
                         </div>
                         <div className='card-icons absolute ml-56 mt-8'>
                             <ul>
-                                <li><AiOutlineHeart className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 hover:text-white transition-ease-out duration:500 mb-3' /></li>
-                                <li><AiOutlineShoppingCart className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 hover:text-white transition-ease-out duration:500 mb-3' /></li>
-                                <li><FaExpandArrowsAlt className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 hover:text-white transition-ease-out duration:500 mb-3' /></li>
-                                <li><TbArrowsShuffle className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 hover:text-white transition-ease-out duration:500' /></li>
+                                <li><AiOutlineHeart className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 duration-500 hover:text-white transition-ease-out duration:500 mb-3' /></li>
+                                <li><AiOutlineShoppingCart className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 duration-500 hover:text-white transition-ease-out duration:500 mb-3' /></li>
+                                <li><FaExpandArrowsAlt className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 duration-500 hover:text-white transition-ease-out duration:500 mb-3' /></li>
+                                <li><TbArrowsShuffle className='text-3xl text-current border bg-white w-10 p-1 rounded hover:bg-red-500 duration-500 hover:text-white transition-ease-out duration:500' /></li>
                             </ul>
                         </div>
 

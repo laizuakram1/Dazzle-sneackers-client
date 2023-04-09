@@ -12,7 +12,8 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const provider = new GoogleAuthProvider();
     const [user, setUser] = useState(null)
-    console.log(user)
+    const [billingAddress,setBillingAddress] = useState({});
+    
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
@@ -48,6 +49,8 @@ const AuthProvider = ({ children }) => {
         userLogin,
         LogOut,
         googleSignIn,
+        setBillingAddress,
+        billingAddress,
         user,
         auth,
 

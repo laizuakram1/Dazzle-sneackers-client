@@ -1,4 +1,5 @@
 import React from 'react';
+import "../Shop/Shop.css"
 import ShopBanner from '../ShopBanner/ShopBanner';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import { FaList } from 'react-icons/fa'
@@ -10,7 +11,7 @@ const Shop = () => {
     return (
         <div>
             <ShopBanner></ShopBanner>
-            <div className="product-container mx-5 mt-20 flex">
+            <div className="product-container mx-5 mt-20 flex grid">
                 <div className="left-sidebar max-w-xl">
                     <ShopSidebar></ShopSidebar>
                 </div>

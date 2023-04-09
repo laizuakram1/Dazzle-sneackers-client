@@ -1,11 +1,12 @@
 import React from 'react';
 import ContactUsBanner from '../ContactUsBanner/ContactUsBanner';
+import ContactForm from '../ContactForm/ContactForm';
 
 const Contact = () => {
     return (
         <div>
             <ContactUsBanner></ContactUsBanner>
-            <h3>Contact Us</h3>
+            <ContactForm></ContactForm>
         </div>
     );
 };

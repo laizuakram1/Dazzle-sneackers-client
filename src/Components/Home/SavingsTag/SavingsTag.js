@@ -1,4 +1,5 @@
 import React from 'react';
+import "../SavingsTag/SavingsTag.css";
 import artImg from '../../../assets/images/tag/colorart.webp'
 import borderImg from '../../../assets/images/tag/border.webp'
 import shoe from '../../../assets/images/tag/divider1.webp'
@@ -6,7 +7,7 @@ import shoe from '../../../assets/images/tag/divider1.webp'
 const SavingsTag = () => {
     return (
         <div className='mt-20'>
-            <div className="hero bg-current">
+            <div className="hero bg-current savings-tag">
                 <div className="hero-content flex-col lg:flex-row p-10">
                     <img src={borderImg} className="max-w-sm rounded z-10 relative ml-20" />
                     <img src={artImg} className="max-w-sm rounded z-20 absolute left-20" />
