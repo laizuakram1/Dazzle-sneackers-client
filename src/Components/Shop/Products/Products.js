@@ -10,7 +10,7 @@ const Products = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/v1/sneackers')
+        fetch('https://dazzle-sneackers-server.onrender.com/api/v1/sneackers')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

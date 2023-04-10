@@ -7,7 +7,7 @@ const RelatedProducts = () => {
     const [bestSeller, setBestSeller] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/v1/related')
+        fetch('https://dazzle-sneackers-server.onrender.com/api/v1/related')
             .then(res => res.json())
             .then(data => setBestSeller(data))
     }, [])

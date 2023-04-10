@@ -11,7 +11,7 @@ const Shop = () => {
     return (
         <div>
             <ShopBanner></ShopBanner>
-            <div className="product-container mx-5 mt-20 flex grid">
+            <div className="product-container mx-5 mt-20 flex">
                 <div className="left-sidebar max-w-xl">
                     <ShopSidebar></ShopSidebar>
                 </div>

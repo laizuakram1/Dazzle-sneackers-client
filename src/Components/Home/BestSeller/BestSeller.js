@@ -7,7 +7,7 @@ const BestSeller = () => {
     const [bestSeller, setBestSeller] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/v1/bestseller')
+        fetch('https://dazzle-sneackers-server.onrender.com/api/v1/bestseller')
             .then(res => res.json())
             .then(data => setBestSeller(data))
     }, [])
