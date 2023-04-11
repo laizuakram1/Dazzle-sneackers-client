@@ -7,7 +7,7 @@ const OurTeam = () => {
     const [members, setMembers] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/v1/ourteam')
+        fetch('https://dazzle-sneackers-server.onrender.com/api/v1/ourteam')
             .then(res => res.json())
             .then(data => setMembers(data))
     }, [])
