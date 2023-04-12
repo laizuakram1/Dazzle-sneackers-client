@@ -4,3 +4,27 @@
 
 
 Live link: [https://dazzle-sneackers.web.app/].
+
+### Front-End Technology
+* React js
+* Html5
+* Css3
+* Javascript
+* React Tailwind css
+* Daisy Ui
+* Material UI core
+
+### Backend Technology
+* Node js
+* Express js
+
+### Database
+* MongoDB
+
+### Authentication
+* Firebase
+
+### Payment
+* React stripe
+
+
