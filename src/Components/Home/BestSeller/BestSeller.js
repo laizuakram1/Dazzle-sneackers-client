@@ -14,7 +14,7 @@ const BestSeller = () => {
     return (
       <div>
         <h3 className="text-4xl font-bold text-center my-20">Best Seller</h3>
-        <div className="grid md:grid-cols-4 ml-5">
+        <div className="grid md:grid-cols-4 ml-5 justify-center">
           {bestSeller.map((seller, i) => (
             <div key={i} className="card w-72 bg-base-100 mb-5">
               <figure className="cursor-pointer">

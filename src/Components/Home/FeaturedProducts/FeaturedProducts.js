@@ -18,7 +18,7 @@ const FeaturedProducts = () => {
     return (
         <div className='mt-24'>
             <h3 className='text-4xl font-extrabold text-center py-12'>Featured Sneackers</h3>
-            <div className='grid md:grid-cols-4 gap-2 mx-5 relative'>
+            <div className='grid md:grid-cols-4 gap-2 mx-5 relative justify-center'>
                 {
                     sneackers.map((sneacker, i) => <div
                         key={i}

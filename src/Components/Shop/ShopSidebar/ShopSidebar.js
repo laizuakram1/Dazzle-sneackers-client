@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
+import '../ShopSidebar/ShopSidebar.css';
 
 //react color picker
 import { BlockPicker } from 'react-color';
@@ -16,7 +17,7 @@ const ShopSidebar = () => {
         
     }
     return (
-        <div>
+        <div className='sidebar-container'>
             <div className="card w-full bg-base-200 mb-8">
                 <div className="card-body">
                     <h2 className="card-title">Top Categories</h2>

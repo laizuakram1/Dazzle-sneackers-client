@@ -1,0 +1,7 @@
+/* responsive with media query */
+
+@media only screen and (max-width: 600px) {
+    .sidebar-container{
+        display:none;
+    }
+}
