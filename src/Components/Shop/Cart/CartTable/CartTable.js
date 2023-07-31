@@ -12,7 +12,7 @@ const CartTable = ({id}) => {
 
     // get single product
     // useEffect(() =>{
-    //   fetch(`http://localhost:8000/api/v1/sneackers/${id}`)
+    //   fetch(`https://dazzle-sneackers-server.onrender.com/api/v1/sneackers/${id}`)
     //     .then(res => res.json())
     //     .then(data => setCartItems(data))
     // },[id])

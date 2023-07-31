@@ -23,7 +23,7 @@ const ProductDetails = () => {
     const [countError, setCountError] = useState('')
 
     useEffect(() =>{
-        fetch(`http://localhost:8000/api/v1/sneackers/${id}`)
+        fetch(`https://dazzle-sneackers-server.onrender.com/api/v1/sneackers/${id}`)
         .then(res => res.json())
         .then(data => setProducts(data))
     },[id])
@@ -51,7 +51,7 @@ const ProductDetails = () => {
 
     const handleCartItems = () =>{
 
-       fetch(`http://localhost:8000/api/v1/sneackers`, {
+       fetch(`https://dazzle-sneackers-server.onrender.com/api/v1/sneackers`, {
          method: "POST",
          headers: {
            "content-type": "application/json",
