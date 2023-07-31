@@ -23,7 +23,7 @@ const ProductDetails = () => {
     const [countError, setCountError] = useState('')
 
     useEffect(() =>{
-        fetch(`https://dazzle-sneackers-server.onrender.com/api/v1/sneackers/${id}`)
+        fetch(`http://localhost:8000/api/v1/sneackers/${id}`)
         .then(res => res.json())
         .then(data => setProducts(data))
     },[id])
@@ -50,7 +50,8 @@ const ProductDetails = () => {
     };
 
     const handleCartItems = () =>{
-       fetch("https://dazzle-sneackers-server.onrender.com/api/v1/sneackers", {
+
+       fetch(`http://localhost:8000/api/v1/sneackers`, {
          method: "POST",
          headers: {
            "content-type": "application/json",
@@ -70,11 +71,11 @@ const ProductDetails = () => {
           <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row grid md:grid-cols-2">
               <div className="flex justify-center">
-                <img src={products.imageUrl} className="max-w-md rounded-lg" />
+                <img src={products?.imageUrl} className="max-w-md rounded-lg" />
               </div>
               <div>
-                <h1 className="text-5xl font-bold">{products.name}</h1>
-                <h3 className="text-4xl font-bold mt-5">${products.price}</h3>
+                <h1 className="text-5xl font-bold">{products?.name}</h1>
+                <h3 className="text-4xl font-bold mt-5">${products?.price}</h3>
                 <div className="rating mt-4">
                   <input
                     type="radio"
@@ -156,10 +157,16 @@ const ProductDetails = () => {
                   </div>
                   <Link
                     onClick={handleCartItems}
-                    to="/cart"
+                    to=""
                     className="btn btn-warning w-36"
                   >
                     Add to Cart
+                  </Link>
+                  <Link
+                    to={`/cart/${id}`}
+                    className="btn btn-success w-36 ml-3"
+                  >
+                    Checkout
                   </Link>
                 </div>
                 <div className="flex mt-8 text-xl">

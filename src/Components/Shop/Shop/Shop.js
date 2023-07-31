@@ -3,7 +3,6 @@ import "../Shop/Shop.css"
 import ShopBanner from '../ShopBanner/ShopBanner';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import { FaList } from 'react-icons/fa'
-import { MdOutlineArrowDropDownCircle } from 'react-icons/md'
 import Products from '../Products/Products';
 import ShopSidebar from '../ShopSidebar/ShopSidebar';
 
